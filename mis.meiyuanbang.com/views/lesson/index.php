@@ -48,8 +48,8 @@ use common\widgets\MyLinkPager;
                               ?>
                               <option value="<?php echo $k ?>" <?php echo $where;?>><?php echo $vv['courseName']?></option>
                               <?php 
-                              } 
-                              } 
+                               }
+                              }
                               ?>
                           </select>
                           &nbsp;
