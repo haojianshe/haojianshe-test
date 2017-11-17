@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="/static/js/jquery.min.js?v=20151124"></script>
+    <script type="text/javascript" src="/static/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/ueditor/dialogs/internal.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;color: #838383;}
+        table{font-size: 12px;margin: 10px;line-height: 30px}
+        .txt{width:300px;height:21px;line-height:21px;border:1px solid #d7d7d7;}
+        .temple{
+            margin: 0 auto;
+            margin-top: 10px;
+            border-bottom: 1px  solid #dcdcdc;
+            border-right: 1px  solid #dcdcdc;
+            width: 562px;
+            overflow: hidden;
+        }
+        .temple li{
+            height: 80px;
+            width: 260px;
+            float: left;
+            padding: 10px;
+            border-top: 1px  solid #dcdcdc;
+            border-left: 1px  solid #dcdcdc;
+
+        }
+        .temple_hover{
+            background:#faf6f6;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table>
+        <tr>
+            <td><label for="text"></label></td>
+            <td>请在<a style='color:blue' href='/video/index' target='_blank'>视频管理</a>上获取视频id</td>
+        </tr>
+        <tr>
+            <td><label for="text"> 视频id：</label></td>
+            <td><input class="txt" id="txtid" type="text"/></td>
+        </tr>
+       
+        <tr>
+        	<td></td>
+             <td>
+             	<input id="chkauto" type="checkbox"/>
+                 <label for="chkauto">自动播放</var></label> 
+             </td>
+        </tr> 
+    </table> -->
+    <div class="temple">
+        <ul>
+           <li onclick="handleDialogOk(1)"><img src="/ueditor/dialogs/edittool/images/temple_01.png"></li>
+           <li onclick="handleDialogOk(2)"><img src="/ueditor/dialogs/edittool/images/temple_02.png"></li>
+           <li onclick="handleDialogOk(3)"><img src="/ueditor/dialogs/edittool/images/temple_03.png"></li>
+           <li onclick="handleDialogOk(4)"><img src="/ueditor/dialogs/edittool/images/temple_04.png"></li>
+           <li onclick="handleDialogOk(5)"><img src="/ueditor/dialogs/edittool/images/temple_05.png"></li>
+           <li onclick="handleDialogOk(6)"><img src="/ueditor/dialogs/edittool/images/temple_06.png"></li>
+           <li onclick="handleDialogOk(7)"><img src="/ueditor/dialogs/edittool/images/temple_07.png"></li>
+           <li onclick="handleDialogOk(8)"><img src="/ueditor/dialogs/edittool/images/temple_08.png"></li>
+           <li onclick="handleDialogOk(9)"><img src="/ueditor/dialogs/edittool/images/temple_09.png"></li>
+           <li onclick="handleDialogOk(10)"><img src="/ueditor/dialogs/edittool/images/temple_10.png"></li>
+           <li onclick="handleDialogOk(11)"><img src="/ueditor/dialogs/edittool/images/temple_11.png"></li>
+           <li onclick="handleDialogOk(12)"><img src="/ueditor/dialogs/edittool/images/temple_12.png"></li>
+           <li onclick="handleDialogOk(13)"><img src="/ueditor/dialogs/edittool/images/temple_13.png"></li>
+           <li onclick="handleDialogOk(14)"><img src="/ueditor/dialogs/edittool/images/temple_14.png"></li>
+           <li onclick="handleDialogOk(15)"><img src="/ueditor/dialogs/edittool/images/temple_15.png"></li>
+           <li onclick="handleDialogOk(16)"><img src="/ueditor/dialogs/edittool/images/temple_16.png"></li>
+           <li onclick="handleDialogOk(17)"><img src="/ueditor/dialogs/edittool/images/temple_17.png"></li>
+           <li onclick="handleDialogOk(18)"><img src="/ueditor/dialogs/edittool/images/temple_18.png"></li>
+           <li onclick="handleDialogOk(19)"><img src="/ueditor/dialogs/edittool/images/temple_19.png"></li>
+           <li onclick="handleDialogOk(20)"><img src="/ueditor/dialogs/edittool/images/temple_20.png"></li>
+           <li onclick="handleDialogOk(21)"><img src="/ueditor/dialogs/edittool/images/temple_21.png"></li>
+           <li onclick="handleDialogOk(22)"><img src="/ueditor/dialogs/edittool/images/temple_22.png"></li>
+           <li onclick="handleDialogOk(23)"><img src="/ueditor/dialogs/edittool/images/temple_23.png"></li> 
+           <li onclick="handleDialogOk(24)"><img src="/ueditor/dialogs/edittool/images/temple_24.png"></li>
+           <li onclick="handleDialogOk(25)"><img src="/ueditor/dialogs/edittool/images/temple_25.png"></li>
+           <li onclick="handleDialogOk(26)"><img src="/ueditor/dialogs/edittool/images/temple_26.png"></li>
+           <li onclick="handleDialogOk(27)"><img src="/ueditor/dialogs/edittool/images/temple_27.png"></li>
+           <li onclick="handleDialogOk(28)"><img src="/ueditor/dialogs/edittool/images/temple_28.png"></li>
+           <li onclick="handleDialogOk(29)"><img src="/ueditor/dialogs/edittool/images/temple_29.png"></li>
+        </ul>
+    </div>
+    
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".temple li").mouseover(function(){
+     $(this).addClass("temple_hover");
+   });
+   $(".temple li").mouseout(function(){
+     $(this).removeClass("temple_hover");
+   });
+});
+function handleDialogOk(type){
+	var strhtml="";
+    switch (type) {
+        case 1:
+            strhtml+="<div style=' border: 1px solid #945619; padding: 10px; margin: 10px 0'>";
+                strhtml+="<p style='font-family:Microsoft YaHei;'>内容请输入到这里</p>";
+            strhtml+="</div>";
+            break;
+        case 2:
+            strhtml+="<div style='border-top: 0.1em solid #000; border-bottom: 0.1em solid #000; margin: 10px auto; padding:10px 2px; line-height: 1.6;'>";
+                strhtml+="<p>内容请输入到这里</p>";
+            strhtml+="</div>";
+            break;
+        case 3:
+            strhtml+="<div style='border:1px solid #000; padding: 3px; margin: 10px 0'>";
+                strhtml+="<div style='border:3px solid #000; padding: 10px;'>";
+                    strhtml+="<p>内容请输入到这里</p>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 4:
+            strhtml+="<div style='border: 1px dashed black; padding: 3px; margin: 10px 0'>";
+                strhtml+="<div style='border:3px solid black; padding: 10px;'>";
+                    strhtml+="<p>内容请输入到这里</p>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 5:
+            strhtml+="<div style='margin:10px 0;'>";
+                strhtml+="<div style='padding: 10px; text-align: left; background:#efefef;'>";
+                    strhtml+="<p>内容请输入到这里</p>";
+                strhtml+="</div>";
+                strhtml+="<div style='width: 100%; text-align: right; margin-top: -4px;'>";
+                    strhtml+="<div style='width: 50px; height: 4px; margin-left: auto; background-color:#f96e57;'></div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 6:
+            strhtml+="<div style=' margin:10px 0; display: inline-block; vertical-align: top; padding: 2px 3px; background: url(https://img.meiyuanbang.com/cms/mxiumi/images/2012-2-18-2.gif) repeat-y 0% 0%;  background-size: 100%; background-attachment: scroll; line-height: 1.6; width:100%;'>";
+                    strhtml+="<div style='display: inline-block; width:100%; border: 1px solid transparent; padding: 10px; background-color: #fefafa; text-align: left;'>";
+                        strhtml+="<p>内容请输入到这里</p>";
+                    strhtml+="</div>";
+                strhtml+="</div>";
+            break;
+        case 7:
+            strhtml+="<div style='width: 283px; margin: 10px auto; border: 8px solid #c0c8d1; padding: 10px;'>";
+                strhtml+="<p style='font-size: 16px;'>内容请输入到这里</p>";
+            strhtml+="</div>";
+            break;
+        case 8:
+            strhtml+="<div style='width: 283px; margin: 10px auto; border: 2px solid #c0c8d1; padding: 10px; border-radius: 0.7em;'>";
+                strhtml+="<p style='text-align: center; font-size: 16px;'>内容请输入到这里</p>";
+            strhtml+="</div>";
+            break;
+        case 9:
+            strhtml+="<div style='width: 283px; margin: 10px auto; padding: 15px 10px 25px; border-radius: 1em;  background:#c0c8d1'>";
+                strhtml+="<div style='text-align: center; color: #f96e57;'>";
+                    strhtml+="<p style='font-size: 16px;'>内容请输入到这里</p>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 10:
+            strhtml+="<div style='display: inline-block; width: 100%; margin: 10px 0; border: 1px solid #c0c8d1; padding: 10px; background:#efefef'>";
+                strhtml+='<p>内容请输入到这里</p>';
+            strhtml+="</div>";
+            break;
+        case 11:
+            strhtml+="<div style='background-color:#fff; margin: 10px 0; width: 100%; border: 1px solid #e2e2e2; padding: 10px; box-shadow:#e2e2e2 0px 16px 1px -13px;'>";
+                strhtml+="<p>内容请输入到这里</p>";
+            strhtml+="</div>";
+            break;
+        case 12:
+             strhtml+="<div style='margin: 10px 0;'>";
+                strhtml+="<div style='width: 100%; border-top: 1px solid #a0a0a0;'></div>";
+                strhtml+="<div style='padding: 0px 9px; margin: -9px 0px;'>";
+                    strhtml+="<div style='border-left: 1px solid #a0a0a0; border-right: 1px solid #a0a0a0; padding: 15px;'>";
+                        strhtml+="<p>内容请输入到这里</p>";
+                    strhtml+="</div>";
+                strhtml+="</div>";
+                strhtml+="<div style='width: 100%; border-bottom: 1px solid #a0a0a0;'></div>";
+            strhtml+="</div>";
+            break;
+        case 13:
+            strhtml+="<div style='margin-top: 10px; margin-bottom: 10px; clear: both; box-shadow: #aaa 0px 0px 10px inset; border:1px solid #fafaef; padding: 10px; background-color: #fafaef;'>";
+                strhtml+="<p>内容请输入到这里</p>";
+            strhtml+="</div>";
+            break;
+        case 14:
+            strhtml+="<div style='text-align: center; margin: 10px 0'>";
+                strhtml+="<div style='border-color:#ccc; box-shadow:#666 0.2em 0.2em 0.5em; padding: 10px; border-width: 3px; border-style: solid;'>";
+                    strhtml+="<p>内容请输入到这里</p>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 15:
+            strhtml+="<div style='margin: 10px 0; text-align: center;'>";
+                strhtml+="<div style='display: inline-block; width: 294px; border: 1px solid #f96e57; padding: 10px;'>";
+                    strhtml+="<p style='font-size: 16px; '>内容请输入到这里</p>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 16:
+            strhtml+="<div style='margin: 10px 0; text-align: center;'>";
+                strhtml+="<div style='display: inline-block; width: 100%; vertical-align: top; padding: 2px 3px; background: url(https://img.meiyuanbang.com/cms/mxiumi/images/2012-2-18-1.gif) repeat 0% 0%; background-size: auto; background-attachment: scroll; line-height: 1.6;'>";
+                    strhtml+="<div style='margin: 1px 0%; transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0px, 0px, 0px); -moz-transform: translate3d(0px, 0px, 0px); -o-transform: translate3d(0px, 0px, 0px); text-align: center;'>";
+                        strhtml+="<div style='display: inline-block; width: 100%; border: 1px solid transparent; padding: 10px; background-color: #fefafa;'>";
+                            strhtml+="<p>内容请输入到这里</p>";
+                        strhtml+="</div>";
+                    strhtml+="</div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 17:
+            strhtml+="<div style='margin: 10px 0;'>";
+                strhtml+="<div style='display: inline-block; vertical-align: bottom; width: 100%; transform: rotate(0.1deg); -webkit-transform: rotate(0.1deg); -moz-transform: rotate(0.1deg); -o-transform: rotate(0.1deg);'>";
+                    strhtml+="<div style='width: 0px; float: left; border-left: 0.8em solid #a65bcb; border-top: 0.8em solid #a65bcb; border-right: 0.8em solid transparent !important; border-bottom: 0.8em solid transparent !important;'></div>";
+                    strhtml+="<div style='width: 0px; float: right; border-top: 0.8em solid #a65bcb; border-right: 0.8em solid #a65bcb; border-left: 0.8em solid transparent !important; border-bottom: 0.8em solid transparent !important;'></div>";
+                strhtml+="</div>";
+                strhtml+="<div style='margin: -1.6em 0px; border: 3px solid #a65bcb; padding: 10px 15px;'>";
+                    strhtml+="<p>这里输入文字</p>";
+                strhtml+="</div>";
+                strhtml+="<div style='display: inline-block; vertical-align: bottom; width: 100%;'>";
+                    strhtml+="<div style='width: 0px; float: left; border-left: 0.8em solid #a65bcb; border-bottom: 0.8em solid #a65bcb; border-top: 0.8em solid transparent !important; border-right: 0.8em solid transparent !important;'></div>";
+                    strhtml+="<div style='width: 0px; float: right; border-right: 0.8em solid #a65bcb; border-bottom: 0.8em solid #a65bcb; border-top: 0.8em solid transparent !important; border-left: 0.8em solid transparent !important;'></div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 18:
+            strhtml+="<div style='margin:10px 0px; text-align: center;'>";
+                strhtml+="<div style='width: 15px; height: 15px; float: left; border-top: 2px solid #f96e57; border-left: 2px solid #f96e57; border-radius: 4px 0px 0px;'></div>";
+                strhtml+="<div style='width: 15px; height: 15px; float: right; border-top: 2px solid #f96e57; border-right: 2px solid #f96e57; border-radius: 0px 4px 0px 0px;'></div>";
+                strhtml+="<div style='clear: both;'></div>";
+                strhtml+="<div style='margin: -10px 0px; padding: 0px 5px;'>";
+                    strhtml+="<div style='border: 2px solid #f96e57; padding: 10px;'>";
+                        strhtml+="<p>内容请输入到这里</p>";
+                    strhtml+="</div>";
+                strhtml+="</div>";
+                strhtml+="<div style='width: 15px; height: 15px; float: left; border-bottom: 2px solid #f96e57; border-left: 2px solid #f96e57; border-radius: 0px 0px 0px 4px;'></div>";
+                strhtml+="<div style='width: 15px; height: 15px; float: right; border-bottom: 2px solid #f96e57; border-right: 2px solid #f96e57; border-radius: 0px 0px 4px;'></div>";
+                strhtml+="<div style='clear: both;'></div>";
+            strhtml+="</div>";
+            break;
+        case 19:
+            strhtml+="<div style='display: inline-block; width: 100%; box-shadow: #ccc 2px 2px 2px; border-color: #f96e57; border-style: solid; border-width: 2px; margin: 10px 0'>";
+                strhtml+="<div style='margin: 0px; padding: 0px; max-width: 100%; color: #3e3e3e; line-height: 25.6px; white-space: normal; widows: 1; background-color:#fff; box-sizing: border-box !important; word-wrap: break-word !important;'>";
+                    strhtml+="<p style='padding: 10px;'>内容请输入到这里</p>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 20:
+            strhtml+="<div style='text-align: center; margin: 10px 0'>";
+                strhtml+="<div style='display: inline-block; vertical-align: top; width: 100%;'>";
+                    strhtml+="<div style='width: 2.5em; height: 2.5em; margin-bottom: -2.5em; float: right; border-right: 2px dotted #c1c1c1; border-top: 2px dotted #c1c1c1;'>";
+                    strhtml+="</div>";
+                    strhtml+="<div style='padding: 8px;'>";
+                        strhtml+="<div style='width: 100%; background-color: #f1e9de;'>";
+                            strhtml+="<div style='padding: 8px 5px;'>";
+                                strhtml+="<p>内容请输入到这里</p>";
+                            strhtml+="</div>";
+                        strhtml+="</div>";
+                    strhtml+="</div>";
+                    strhtml+="<div style='width: 2.5em; height: 2.5em; margin-top: -2.5em; border-left: 2px dotted #c1c1c1; border-bottom: 2px dotted #c1c1c1;'></div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 21:
+            strhtml+="<div style='margin: 10px 0; text-align: center;'>";
+                strhtml+="<div style='display: inline-block; vertical-align: top;'>";
+                    strhtml+="<div style='background-color: #fefafa; padding: 0px 12px;'>";
+                        strhtml+="<p style='font-weight: 700; font-size: 16px;'>用水</p>";
+                    strhtml+="</div>";
+                    strhtml+="<div style='width: 6px; height: 6px; border-radius: 100%; float: left; margin-top: -14px; background-color: #f96e57;'></div>";
+                    strhtml+="<div style='width: 6px; height: 6px; border-radius: 100%; float: right; margin-top: -14px; background-color: #f96e57;'></div>";
+                    strhtml+="<div style='clear: both;'></div>";
+                strhtml+="</div>";
+                strhtml+="<div style='border: 2px solid #f96e57; margin-top: -12px; padding: 10px;'>";
+                    strhtml+="<p style='font-size: 16px;'>内容请输入到这里</p>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 22:
+            strhtml+="<div style='margin: 10px 0; text-align: center;'>";
+                strhtml+="<div style='display: inline-block; vertical-align: top;'>";
+                    strhtml+="<div style='background-color: #fefafa; padding: 0px 12px;'><br><p></p>";
+                    strhtml+="</div>";
+                    strhtml+="<div style='width: 6px; height: 6px; border-radius: 100%; float: left; margin-top: -14px; background-color: #f96e57;'></div>";
+                    strhtml+="<div style='width: 6px; height: 6px; border-radius: 100%; float: right; margin-top: -14px; background-color: #f96e57;'></div>";
+                    strhtml+="<div style='clear: both;'></div>";
+                strhtml+="</div>";
+                strhtml+="<div style='border: 2px solid #f96e57; margin-top: -12px; padding: 10px;'>";
+                    strhtml+="<p style='margin-top: 0px; margin-bottom: 0px; padding: 0px;'><span style='font-weight: 700; font-size: 16px; font-family:Microsoft YaHei'>标题：</span></p>";
+                    strhtml+="<p style='font-size: 16px; font-family: Microsoft YaHei;'>内容请输入到这里</p>";
+                strhtml+="</div>";
+           strhtml+="</div>";
+            break;
+        case 23:
+            strhtml+="<div style='background-color:#fff; margin: 10px 0;'>";
+                strhtml+="<div style='margin: 10px 0px;'>";
+                    strhtml+="<div style='display: inline-block; width: 60px; vertical-align: top;'>";
+                        strhtml+="<img src='https://img.meiyuanbang.com/cms/ueditor2017-04-16/C787BF318A6B39EAC82F986767D0D8EC.png' style='width: 40px; height: 40px; border-radius: 20px; margin: 5px 10px;'>";
+                    strhtml+="</div>";
+                    strhtml+="<div style='display: inline-block; width: 75%; '>";
+                        strhtml+="<img style='vertical-align: top; margin-top: 29px; float: left;  width: 20px; height: 17px; background-color: #ffe4c8;' src='https://img.meiyuanbang.com/cms/mxiumi/images/002-conv-1-left-2-v2-img0.png'>";
+                        strhtml+="<div style='display: inline-block; width: 75%; margin-top: 11px; border-radius: 16px; padding: 16px;  background-color: #ffe4c8;'>";
+                        strhtml+="<p>内容请输入到这里</p>";
+                        strhtml+="</div>";
+                    strhtml+="</div>";
+                strhtml+="</div>";
+                strhtml+="<div style='margin: 10px 0px; text-align: right; position: static;'>";
+                    strhtml+="<div style='display: inline-block; width: 78%;'>";
+                        strhtml+="<div style=' width: 75%; float: left; margin-top: 11px; border-radius: 16px; padding: 16px; background-color: #bce3f9;'>";
+                            strhtml+="<p style='font-family: 'Microsoft YaHei';'>内容请输入到这里</p>";
+                        strhtml+="</div>";
+                        strhtml+="<img style='vertical-align: top; margin-top: 29px; float: left; width: 20px; height: 17px; background-color: #bce3f9;' src='https://img.meiyuanbang.com/cms/mxiumi/images/003-conv-1-right-2-v2-img0.png'> ";
+                    strhtml+="</div>";
+                    strhtml+="<div style='display: inline-block; width: 60px; vertical-align: top;'>";
+                        strhtml+="<img src='https://img.meiyuanbang.com/cms/ueditor2017-04-16/C787BF318A6B39EAC82F986767D0D8EC.png' style='width: 40px; height: 40px; border-radius: 20px; margin: 5px 10px;'> ";
+                    strhtml+="</div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 24:
+            strhtml+="<div style='margin-top: 10px; margin-bottom: 10px; '>";
+                strhtml+="<div style='margin-bottom: -1.4em;'>";
+                    strhtml+="<div style='width: 0.62em; height: 0.62em; border-left: 1px solid rgb(158, 158, 158); border-top: 1px solid rgb(158, 158, 158);'></div>";
+                    strhtml+="<div style='width: 2.5em; height: 1.4em; margin-left: 0.31em; margin-top: -0.31em; border-left: 1px solid rgb(158, 158, 158); border-top: 1px solid rgb(158, 158, 158);'></div>";
+                strhtml+="<div style='padding: 15px;'>";
+                    strhtml+="<p style='text-align: center;'>内容请输入到这里</p>";
+                strhtml+="</div>";
+                strhtml+="<div style='width: 2.5em; margin-top: -1.4em; margin-left: auto;'>";
+                    strhtml+="<div style='width: 2.5em; height: 1.4em; margin-bottom: -0.31em; margin-left: -0.31em; border-right: 1px solid rgb(158, 158, 158); border-bottom: 1px solid rgb(158, 158, 158);'></div>";
+                    strhtml+="<div style='width: 0.62em; height: 0.62em; margin-left: auto; border-right: 1px solid rgb(158, 158, 158); border-bottom: 1px solid rgb(158, 158, 158);'>    </div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+
+            break;
+         case 25:
+            strhtml+="<div style='margin-top: 10px; margin-bottom: 10px; border: 2px solid rgb(160, 160, 160); border-radius: 0.8em; text-align: center;'>";
+                strhtml+="<div style='display: inline-block;'>";
+                    strhtml+="<div style='padding:10px 10px;'>";
+                        strhtml+="<div style='width: 0.5em; height: 0.5em; float: left; border-radius: 100%; background-color: rgb(160, 160, 160);'></div>";
+                        strhtml+="<div style='width: 0.5em; height: 0.5em; float: right; border-radius: 100%; background-color: rgb(160, 160, 160);'></div>";
+                        strhtml+="<div style='clear: both;'></div>";
+                    strhtml+="</div>";
+                    strhtml+="<div style='padding: 10px;'>";
+                        strhtml+="<div style='text-align: center;'>";
+                            strhtml+="<p>内容请输入到这里</p>";
+                        strhtml+="</div>";
+                    strhtml+="</div>";
+                    strhtml+="<div style='padding: 0px 10px 10px;'>";
+                        strhtml+="<div style='width: 0.5em; height: 0.5em; float: left; border-radius: 100%; background-color: rgb(160, 160, 160);'></div>";
+                        strhtml+="<div style='width: 0.5em; height: 0.5em; float: right; border-radius: 100%; background-color: rgb(160, 160, 160);'></div>";
+                        strhtml+="<div style='clear: both;'></div>";
+                    strhtml+="</div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+         case 26:
+            strhtml+="<div style='margin-top: 10px; margin-bottom: 10px; padding: 10px; display: inline-block; border: 2px dotted rgb(192, 200, 209); border-radius: 0.7em;'>";
+                strhtml+="<p>内容请输入到这里</p>";
+            strhtml+="</div>";
+            break;
+         case 27:
+            strhtml+="<div style='margin-top: 10px; margin-bottom: 10px; border: 1px solid rgb(220, 220, 220); box-shadow: rgb(220, 220, 220) 0px 0px 6px; padding: 10px;'>";
+                strhtml+="<p style='line-height: 2em;'>内容请输入到这里</p>";
+            strhtml+="</div>";
+            break;
+         case 28:
+            strhtml+="<div style='margin-top: 10px; margin-bottom: 10px;'>";
+                strhtml+="<div style='display: inline-block; border: 8px solid rgb(193, 240, 235); padding: 10px; box-shadow: rgb(0, 0, 0) 0px 0px 0px;'>";
+                    strhtml+="<p>内容请输入到这里</p>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+         case 29:
+            strhtml+="<div style='margin-top: 10px; margin-bottom: 10px; padding: 10px; max-width: 100%; border: 3px solid rgb(201, 201, 201); box-shadow: rgb(170, 170, 170) 0px 0px 10px;'>";
+                strhtml+="<p style='text-align: center;'>内容请输入到这里</p>";
+            strhtml+="</div>";
+            break;
+        default:
+            // statements_def
+            break;
+    }
+    
+    editor.execCommand('insertHtml', strhtml);
+    dialog.close();
+}
+dialog.onok = handleDialogOk;
+</script>
+</body>
+</html>

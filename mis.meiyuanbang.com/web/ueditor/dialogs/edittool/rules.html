@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="/static/js/jquery.min.js?v=20151124"></script>
+    <script type="text/javascript" src="/static/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/ueditor/dialogs/internal.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;color: #838383;}
+        table{font-size: 12px;margin: 10px;line-height: 30px}
+        .txt{width:300px;height:21px;line-height:21px;border:1px solid #d7d7d7;}
+        .rules{
+            margin: 0 auto;
+            margin-top: 10px;
+            border-bottom: 1px  solid #dcdcdc;
+            border-right: 1px  solid #dcdcdc;
+            width: 562px;
+            overflow: hidden;
+        }
+        .rules li{
+            height: 50px;
+            width: 260px;
+            float: left;
+            padding: 10px;
+            border-top: 1px  solid #dcdcdc;
+            border-left: 1px  solid #dcdcdc;
+
+        }
+        .rules_hover{
+            background:#faf6f6;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table>
+        <tr>
+            <td><label for="text"></label></td>
+            <td>请在<a style='color:blue' href='/video/index' target='_blank'>视频管理</a>上获取视频id</td>
+        </tr>
+        <tr>
+            <td><label for="text"> 视频id：</label></td>
+            <td><input class="txt" id="txtid" type="text"/></td>
+        </tr>
+    </table> -->
+    <div class="rules">
+        <ul>
+            <li onclick="handleDialogOk(1)"><img src="/ueditor/dialogs/edittool/images/rules_01.png"></li>
+            <li onclick="handleDialogOk(2)"><img src="/ueditor/dialogs/edittool/images/rules_02.png"></li>
+            <li onclick="handleDialogOk(3)"><img src="/ueditor/dialogs/edittool/images/rules_03.png"></li>
+            <li onclick="handleDialogOk(4)"><img src="/ueditor/dialogs/edittool/images/rules_04.png"></li>
+            <li onclick="handleDialogOk(5)"><img src="/ueditor/dialogs/edittool/images/rules_05.png"></li>
+            <li onclick="handleDialogOk(6)"><img src="/ueditor/dialogs/edittool/images/rules_06.png"></li>
+            <li onclick="handleDialogOk(7)"><img src="/ueditor/dialogs/edittool/images/rules_07.png"></li>
+            <li onclick="handleDialogOk(8)"><img src="/ueditor/dialogs/edittool/images/rules_08.png"></li>
+            <li onclick="handleDialogOk(9)"><img src="/ueditor/dialogs/edittool/images/rules_09.png"></li>
+            <li onclick="handleDialogOk(10)"><img src="/ueditor/dialogs/edittool/images/rules_10.png"></li>
+            <li onclick="handleDialogOk(11)"><img src="/ueditor/dialogs/edittool/images/rules_11.png"></li>
+        </ul>
+    </div>
+    
+    
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".rules li").mouseover(function(){
+     $(this).addClass("rules_hover");
+   });
+   $(".rules li").mouseout(function(){
+     $(this).removeClass("rules_hover");
+   });
+});
+
+function handleDialogOk(type){
+    var strhtml="";
+    switch (type) {
+        case 1:
+            strhtml+="<div style='margin: 10px 0px;'>";
+                strhtml+="<img style='max-width: 100%;' src='https://img.meiyuanbang.com/cms/mxiumi/images/014-hint-bottom-20.gif' >";
+            strhtml+="</div>";
+            break;
+        case 2:
+            strhtml+="<div style='margin:10px 0;'>";
+                strhtml+="<div style='display: inline-block; vertical-align: middle; width: 45%;'>";
+                    strhtml+="<div style='border-top: 1px dotted #171714;'></div>";
+                strhtml+="</div>";
+                strhtml+="<div style='display: inline-block; vertical-align: middle; width: 4%;'>";
+                    strhtml+="<img style='max-width: 100%; vertical-align: middle;' src='https://img.meiyuanbang.com/cms/mxiumi/images/2017-2-11-10.gif'>";
+                strhtml+="</div>";
+                strhtml+="<div style='display: inline-block; vertical-align: middle; width: 45%;'>";
+                    strhtml+="<div style='border-top: 1px dotted #171714;'></div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+
+            break;
+        case 3:
+            strhtml+="<div style='text-align: center; margin: 10px 0;'>";
+                strhtml+="<img style='max-width: 100%;' src='https://img.meiyuanbang.com/cms/mxiumi/images/2017-3-22-6.png'>";
+            strhtml+="</div>";
+            break;
+        case 4:
+            strhtml+="<div style='margin:10px auto'>";
+                strhtml+="<div style='margin: 0.5em 0px;'>";
+                    strhtml+="<img style='width: 2.8em; float: right;' src='https://img.meiyuanbang.com/cms/mxiumi/images/012-dividing-line-21-img.png'> ";
+                strhtml+="<div style='clear: both;'></div>";
+                strhtml+="<div style='width: 100%; border-top: 2px dotted #f96e57; background: url(https://img.meiyuanbang.com/cms/mxiumi/images/012-dividing-line-2-img1.png) repeat-x;'>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+
+            break;
+        case 5:
+            strhtml+="<div style='text-align: center; margin: 10px 0;'>";
+                strhtml+="<img style='max-width: 100%; width: 663px; height: 149px;' src='https://img.meiyuanbang.com/cms/mxiumi/images/2017-3-27-10.png'>";
+            strhtml+="</div>";
+            break;
+        case 6:
+            strhtml+="<div style='text-align: center; margin: 10px 0;'>";
+                strhtml+="<img style='max-width: 100%;' src='https://img.meiyuanbang.com/cms/mxiumi/images/2017-3-27-6.png'>";
+            strhtml+="</div>";
+            break;
+        case 7:
+            strhtml+="<div style='margin-top: 10px; margin-bottom: 10px; text-align: center;'>";
+                strhtml+="<div style='width: 100%; height: 3em; text-align: left;'>";
+                    strhtml+="<div style='width: 100%; border-top: 1px solid rgb(48, 177, 209); float: left; margin-top: 1.55em;'></div>";
+                    strhtml+="<div style='width: 3em; height: 3em; display: inline-block; vertical-align: top; margin-top: -1.6em; border-radius: 100%; background-color: rgb(254, 255, 255); background-image: url(https://img.meiyuanbang.com/cms/mxiumi/images/2016-11-23-20.gif); background-position: center center; background-repeat: no-repeat; background-size: cover;'></div>";
+                    strhtml+="<div style='clear: both; box-sizing: border-box;'></div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 8:
+            strhtml+="<div style='text-align: center; margin-top: 10px; margin-bottom: 10px;'><img style='display: inline; visibility: visible !important; width: auto !important; height: auto !important;' src='https://img.meiyuanbang.com/cms/mxiumi/images/sjsion.gif'></div>";
+
+            break;
+        case 9:
+            strhtml+="<div style='color: rgb(62, 62, 62); line-height: 25.6px; white-space: normal; text-align: center;'><span style='font-size: 14px;'>▼</span></div>";
+            break;
+        case 10:
+            strhtml+="<div style='margin: 0.5em 0px; text-align: center;'>";
+                strhtml+="<img style='width: 100%; max-height: 1.2em !important;' src='https://img.meiyuanbang.com/cms/mxiumi/images/013-dividing-line-10.png'> ";
+                strhtml+="<div style='width: 0.6em; height: 0.6em; margin: -0.9em auto 0.9em;'>";
+                    strhtml+="<div style='width: 100%; height: 100%; margin-left: 1px; border-radius: 100%; background-color: rgb(142, 201, 101);'></div>";
+                strhtml+="</div>";
+            strhtml+="</div>";
+            break;
+        case 11:
+            strhtml+="<div style='text-align: center;'><span style='font-size: 18px; color: rgb(255, 41, 65);'>▼</span></div>";
+            break;
+        default:
+            // statements_def
+            break;
+    }
+	
+	editor.execCommand('insertHtml', strhtml);
+	dialog.close();
+}
+dialog.onok = handleDialogOk;
+</script>
+</body>
+</html>

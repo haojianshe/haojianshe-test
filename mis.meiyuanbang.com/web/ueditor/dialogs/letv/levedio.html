@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="/static/js/jquery.min.js?v=20151124"></script>
+    <script type="text/javascript" src="/static/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/ueditor/dialogs/internal.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;color: #838383;}
+        table{font-size: 12px;margin: 10px;line-height: 30px}
+        .txt{width:300px;height:21px;line-height:21px;border:1px solid #d7d7d7;}
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="text"></label></td>
+            <td>请在<a style='color:blue' href='http://www.lecloud.com/' target='_blank'>乐视云平台</a>上获取uu和vu的相关信息</td>
+        </tr>
+        <tr>
+            <td><label for="text"> uu值：</label></td>
+            <td><input class="txt" id="txtuu" type="text"/></td>
+        </tr>
+        <tr>
+            <td><label for="text"> vu值：</label></td>
+            <td><input class="txt" id="txtvu" type="text"/></td>
+        </tr>
+        <tr>
+        	<td></td>
+             <td>
+             	<input id="chkauto" type="checkbox"/>
+                 <label for="chkauto">自动播放</var></label> 
+             </td>
+        </tr>
+    </table>
+<script type="text/javascript">
+function handleDialogOk(){
+	//判断uu和vu必须输入	
+	uu = $.trim($('#txtuu').val());
+	vu = $.trim($('#txtvu').val());
+	if($("#chkauto")[0].checked){
+		auto = 1;	
+	}
+	else{
+		auto = 0;
+	}
+	if(uu=='' || vu==''){
+		layer.msg('uu值和uv值必须输入', {icon: 2});
+		return false;
+	}
+	//给编辑器赋值
+	content = editor.getContent();
+	videocode = '[levedio]{uu:'+ uu +',vu:'+vu;
+	if(auto == 1){
+		videocode += ',auto:' + auto;
+	}
+	videocode += '}此处为乐视视频[/levedio]';
+	editor.setContent(content+videocode); 
+	dialog.close();
+}
+dialog.onok = handleDialogOk;
+</script>
+</body>
+</html>

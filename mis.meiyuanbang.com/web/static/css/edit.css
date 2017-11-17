@@ -1,0 +1,377 @@
+/*CSS Reset start*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding: 0; margin: 0; }
+table { border-collapse: collapse; border-spacing: 0; font-size:12px; font-family: "宋体", Verdana, Geneva, sans-serif; }
+fieldset, img { border: 0; }
+address, caption, cite, code, dfn, em, strong, th, var { font-weight: normal; font-style: normal; }
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+q:before, q:after { content:''; }
+abbr, acronym { border: 0; }
+input, select { vertical-align: middle; font-size:12px; }
+textarea { font-size:12px; }
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.clearfix { display:block; clear:both; }
+.clearfix2 { height:1%; overflow:auto; }
+.mydebug { border:#000 solid 1px; }
+a:link, a:visited { color:#004499; text-decoration:none; }
+a:hover { color:#004499; text-decoration:underline; }
+body { font-family:Tahoma, "宋体", Verdana, Geneva, sans-serif; font-size:12px; background-color:#FFF; word-break:break-all; }
+/*CSS Reset end*/
+
+.field-validation-error{    color: #ff0000;}
+.field-validation-valid{    display: none;}
+.input-validation-error{    border: 1px solid #ff0000;    background-color: #ffeeee;}
+.validation-summary-errors{    font-weight: bold;    color: #ff0000;}
+.validation-summary-valid{display: none;}
+
+
+/*admincp CSS start*/
+#pagecontainer { background-color: #83B0EC; background-image: url(../images/bg1.jpg); background-repeat: repeat-x; background-position: left top; min-width:1000px; }
+#pagecontainer #hd { position: relative; height: 76px; }
+#pagecontainer #hd .hdtitle { font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #15338F; height: 20px; position: absolute; line-height: 20px; left: 10px; top: 0px;  min-width:300px;}
+#pagecontainer #hd .hduserinfo { line-height: 20px; color: #333; position: absolute; height: 20px; top: 0px; right: 10px; }
+#pagecontainer #hd .hduserinfo a { font-weight: 700; color: #004399; margin-left: 5px; }
+#pagecontainer #hd .msnlogo { background-image: url(../images/logo.png); height: 40px; position: absolute; left: 10px; top: 25px; vertical-align: bottom; padding-left: 114px; padding-top:12px; background-repeat: no-repeat; background-position: left top; font-family: "微软雅黑", "宋体"; font-size: 22px; color: #103190; z-index: 10; white-space: nowrap; }
+#pagecontainer #hd .hdmenu { font-size: 14px; position: absolute; z-index: 9; left: 280px; top: 31px; width: 570px; line-height: 16px; background-color: #FFF; height: 16px; padding-top: 10px; padding-right: 3px; padding-bottom: 10px; padding-left: 3px; white-space: nowrap; }
+#pagecontainer #hd .hdmenu ul li { float: left; padding-right: 8px; padding-left: 8px; border-right-width: 1px; border-right-style: solid; border-right-color: #999; line-height: 16px; height: 16px; }
+.longmarchlogo { background-color: #FFF; background-image: url(../images/LongMarchlogo.jpg); background-repeat: no-repeat; background-position: right center; position: absolute; font-size: 11px; line-height: 35px; font-weight: 700; color: #000; height: 35px; padding-right: 42px; font-family: Arial, Helvetica, sans-serif; top: 30px; right: 10px;}
+/**add by Brad Gao, 2009-06-23 begin **/
+.boxborder1 { border: 1px solid #6F9DD9; background-color:#F2F8FF; height:100%; overflow: hidden; }
+.boxborder2 { border: 1px solid #6F9DD9; background-color:#F2F8FF; height:100%; overflow:hidden; }
+.sidebar .menutop { background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left top; line-height: 19px; background-color: #ECF5FF; height: 19px; padding-left: 8px; }
+.sidebar .mainmenu { line-height: 24px; font-weight: 700; color: #049; height: 24px; padding-left: 8px; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -87px; cursor:pointer; display: block; }
+.sidebar .sidebarmenu .collapsed { height:24px; overflow:hidden; }
+.sidebar .sidebarmenu .sidebarsubmenu { margin-left: 8px; line-height: 22px; margin-top: 5px; margin-bottom: 5px; overflow:auto; }
+.sidebar .sidebarmenu .sidebarsubmenu li { background-image: url(../images/bg_cs.png); background-repeat: no-repeat; background-position: -317px -252px; padding-left: 8px; }
+.sidebar .sidebarmenu .sidebarsubmenu li a { font-weight:400; }
+.sidebar .sidebarmenu .sidebarsubmenu li .current { font-weight:700; }
+.sidebar .sidebarmenu1 .collapsed { height:24px; overflow:hidden; }
+.sidebar .sidebarmenu1 .sidebarsubmenu { margin-left: 8px; line-height: 22px; margin-top: 5px; margin-bottom: 5px; overflow:auto; }
+.sidebar .sidebarmenu1 .sidebarsubmenu li { background-image: url(../images/bg_cs.png); background-repeat: no-repeat; background-position: -317px -252px; padding-left: 8px; }
+.sidebar .sidebarmenu1 .sidebarsubmenu li a { font-weight:400; }
+.sidebar .sidebarmenu1 .sidebarsubmenu li .current { font-weight:700; }
+.sidebar .sidebarsearch { margin: 8px; }
+.sidebar .sidebarsearch .sidebarsearchinput { line-height: 21px; height: 21px; width: 85px; border: 1px solid #AFD2FF; margin-right: -5px; padding-left: 2px; font-family: "å®‹ä½“", Verdana, Geneva, sans-serif; }
+.sidebar .sidebarsearch .sidebarsearchbtn { font-size: 12px; color: #FFF; background-image: url(../images/bg_cs.png); background-repeat: no-repeat; background-position: 0px -291px; height: 21px; width: 35px; line-height: 21px; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; cursor: pointer; }
+.sidebar .sidebartree { padding:5px 0; overflow:scroll; font-family: "å®‹ä½“", Verdana, Geneva, sans-serif; }
+.sidebar .sidebartree li { background-image: url(../images/bg_cs.png); background-repeat: no-repeat; background-position: -310px -325px; line-height: 22px; height: 22px; padding-left: 28px; }
+.sidebar .sidebartree1 { padding:5px 0; overflow:scroll; font-family: "å®‹ä½“", Verdana, Geneva, sans-serif; }
+.sidebar .sidebartree1 li { background-image: url(../images/bg_cs.png); background-repeat: no-repeat; background-position: -310px -325px; line-height: 22px; height: 22px; padding-left: 28px; }
+/**add by Brad Gao, 2009-06-23 end **/
+/*admincp CSS end*/
+
+
+/*common CSS start*/
+.bigbtngroup { margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; }
+.bigbtngroup a, .bigbtngroup a:link, .bigbtngroup a:visited, .bigbtngroup a, .bigbtngroup a:hover, .bigbtngroup a:active { display:block; line-height: 28px; color: #FFF; text-decoration: none; background-color: #06C; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: center -480px; text-align: center; white-space: nowrap; height: 28px; padding-right: 16px; padding-left: 16px; float:left; margin-right:5px; border: 1px solid #196CC8; margin-bottom:5px; *margin-bottom:0px;
+}
+.bigbtngroup.fixedwidth1 a, .bigbtngroup.fixedwidth1 a:link, .bigbtngroup.fixedwidth1 a:visited, .bigbtngroup.fixedwidth1 a:hover, .bigbtngroup.fixedwidth1 a:active { min-width: 100px; padding:0px; _width: 100px; }
+.bigbtngroup.font14px a, .bigbtngroup.font14px a:link, .bigbtngroup.font14px a:visited, .bigbtngroup.font14px a:hover, .bigbtngroup.font14px a:active { font-size:14px; }
+.normalbtn_l { color: #FFF; text-decoration: none; }
+.normalbtn_l a, .normalbtn_l a:link, .normalbtn_l a:visited, .normalbtn_l a, .normalbtn_l a:hover, .normalbtn_l a:active { line-height: 23px; color: #FFF; text-decoration: none; background-color: #F60; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: center -429px; text-align: center; white-space: nowrap; height: 23px; padding-right: 8px; padding-left: 8px; float:left; margin-right:5px; border: 1px solid #196CC8; min-width:60px; _width:60px; }
+.normalbtn_c { color: #FFF; text-decoration: none; }
+.normalbtn_c a, .normalbtn_c a:link, .normalbtn_c a:visited, .normalbtn_c a, .normalbtn_c a:hover, .normalbtn_c a:active { line-height: 23px; color: #FFF; text-decoration: none; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: center -429px; text-align: center; white-space: nowrap; height: 23px; padding-right: 8px; padding-left: 8px; margin-right:5px; display:inline-block; border: 1px solid #196CC8; min-width:60px; _width:60px; }
+.normalbtn_r { color: #FFF; text-decoration: none; float:right; }
+.normalbtn_r a, .normalbtn_r a:link, .normalbtn_r a:visited, .normalbtn_r a, .normalbtn_r a:hover, .normalbtn_r a:active { display:block; line-height: 23px; color: #FFF; text-decoration: none; background-color: #06C; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: center -429px; text-align: center; white-space: nowrap; height: 23px; padding-right: 8px; padding-left: 8px; float:left; margin-left:5px; border: 1px solid #196CC8; min-width:60px; _width:60px; }
+.smallbtn { font-size: 12px; line-height: 21px; color: #FFF; text-decoration: none; background-color: #338AE7; background-image: url(../images/bg_cs.png); background-repeat: no-repeat; background-position: left -254px; height: 21px; width: 55px; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; cursor: pointer; font-family: "宋体", Verdana, Geneva, sans-serif; }
+.smallbtn2 { font-size: 12px; line-height: 21px; color: #FFF; text-decoration: none; background-color: #338AE7;  background-repeat: no-repeat; background-position: left -254px; height: 21px; width: 80px; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; cursor: pointer; font-family: "宋体", Verdana, Geneva, sans-serif; }
+.smallinput { line-height: 19px; height: 19px; border: 1px solid #AFD2FF; padding-left: 3px; font-family: "宋体", Verdana, Geneva, sans-serif; }
+.smallinput2 { line-height: 19px; height: 19px; border: 1px solid #AFD2FF; padding-left: 3px; font-family: "宋体", Verdana, Geneva, sans-serif; margin-right:-5px; }
+.smallselect { line-height: 21px; height: 21px; border: 1px solid #AFD2FF; font-family: "宋体", Verdana, Geneva, sans-serif; }
+.headerbox { background-color: #F2F8FF; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #6F9DD9; padding:5px; height:25px; min-width:650px; line-height: 25px; }
+.headerbox strong { font-weight: 700; }
+.headerbox .headerbox_l { float: left; min-width:150px; }
+.headerbox .headerbox_r { float: right; white-space: nowrap; }
+.location { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #6F9DD9; padding:0 5px; min-height:32px; line-height:32px; min-width:650px; _height:32px; }
+.normaltable { margin:8px 8px 0 8px; min-width:650px; }
+.normaltable table {border-collapse: collapse;}
+.normaltable2 { margin:15px 8px 0 8px; min-width:650px; }
+.normaltable td { border: 1px solid #BDD2EE; line-height: 18px; height: 18px; padding: 5px; }
+.normaltable2 td { line-height: 18px; height: 18px; padding: 7px 5px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #BDD2EE; text-align: left; }
+.normaltable2 table tr .alignright1 { text-align: right; width:200px; font-weight: 700; }
+.normaltable table .trhead { font-weight: 400; color: #000; background-color: #D6E8FF; }
+.normaltable table .tdhead { font-weight: 700; color: #000; background-color: #D6E8FF; }
+
+.normaltable .need {color: red !important; }
+.normaltable .green {color: green !important; }
+.linklist1 a { margin-right: 20px; }
+.normaltable table tr .tdhead em { margin-right: 12px; }
+.letterlist1 a { line-height: 14px; color: #FFF; background-color: #3188E7; text-align: center; height: 14px; width: 10px; display: inline-block; margin:0 1px; font-family:Tahoma, Verdana, Geneva, sans-serif; font-size:10px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: #81B6F0; border-right-color: #2566AD; border-bottom-color: #2566AD; border-left-color: #81B6F0; }
+.letterlist1 a:link, .letterlist1 a:visited, .letterlist1 a:hover, .letterlist1 a:active { color: #FFF; text-decoration:none; }
+.functionbar1 { line-height: 28px; height: 28px; margin: 8px; }
+.functionbar1 .sel { float: left; _margin-top:6px; }
+.functionbar1 .bigbtngroup { float: left; margin:0 8px; }
+.functionbar1 .pages { float: right; white-space: nowrap; _margin-top:6px; }
+.functionbar1 .pages a { font-weight:700; }
+.location .search1 { float:left; _margin-top:4px; }
+.greenfont1 { color: #0C0; }
+.redfont1 { color: #F00; }
+.location .formtable1 { margin:8px 0; }
+.location .formtable1 td { line-height: 26px; }
+.formtable1 tr td em { background-color: #CCC; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -648px; border: 1px solid #AFD2FF; cursor:pointer; text-align: center; white-space:nowrap; padding: 4px 6px 3px; vertical-align: middle; _padding: 3px 6px 4px; }
+.headerbox .headerbox_l { padding-top:1px; _margin-bottom:-9px; font-size: 14px; margin-left: 5px; ; }
+.headerbox .headerbox_l .normaltab1 { }
+.headerbox .headerbox_l .normaltab1 a { margin-left: 5px; height: 28px; padding-right: 10px; padding-left: 10px; border: 1px solid #6F9DD9; line-height: 28px; font-size: 14px; display: inline-block; background-color: #FFF; text-decoration:none; }
+.headerbox .headerbox_l .normaltab1 .current { color: #FFF; background-color: #6F9DD9; }
+.formtitle1 { font-size: 14px; line-height: 32px; font-weight: 700; color: #000; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -534px; height: 32px; padding-left: 8px; margin-bottom:6px; margin-bottom:0; font-family:Tahoma, Geneva, sans-serif; }
+.formtable2 { width: 100%; }
+.formtable2 tr td, .formtable2 tr th { padding: 4px; }
+.formtable2 tr th { text-align: right; }
+.inputclass1 { height: 15px; width: 240px; border: 1px solid #C8C8C8; vertical-align: middle; margin-right: -5px; margin-left: 1px; padding-top: 5px; padding-right: 5px; padding-bottom: 4px; padding-left: 5px; }
+.inputclass2 { height: 15px; width: 440px; border: 1px solid #C8C8C8; vertical-align: middle; margin-right: -5px; margin-left: 1px; padding-top: 5px; padding-right: 5px; padding-bottom: 4px; padding-left: 5px; }
+.inputclass3 { height: 15px; width: 340px; border: 1px solid #C8C8C8; vertical-align: middle; margin-right: -5px; margin-left: 1px; padding-top: 5px; padding-right: 5px; padding-bottom: 4px; padding-left: 5px; }
+.inputclass4 { height: 15px; width: 440px; border: 1px solid #C8C8C8; vertical-align: middle; margin-right: 1px; margin-left: 1px; padding-top: 5px; padding-right: 5px; padding-bottom: 4px; padding-left: 5px; }
+.inputclass5 { height: 15px; width: 160px; border: 1px solid #C8C8C8; vertical-align: middle; margin-right: 1px; margin-left: 1px; padding-top: 5px; padding-right: 5px; padding-bottom: 4px; padding-left: 5px; }
+.secinputclass1 { margin-left: 6px; }
+.formtable2 tr td em { background-color: #CCC; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -330px; border: 1px solid #C8C8C8; cursor:pointer; text-align: center; white-space:nowrap; padding: 6px; vertical-align: middle; }
+.formtable2 tr td .formlabel2 { line-height: 26px; float: left; height: 26px; display: block; }
+.textareastyle1 { font-family: "宋体", Verdana, Geneva, sans-serif; font-size: 12px; color: #000; height: 80px; width: 300px; border: 1px solid #C8C8C8; }
+.buttonclass1 { font-family: Verdana, Geneva, sans-serif; line-height: 25px; color: #FFF; background-color: #F60; height: 27px; width: 87px; font-size: 12px; background-image: url(../images/bg_cs.png); background-repeat: no-repeat; background-position: left -381px; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; cursor: pointer; }
+.buttonclass2 { font-family: Verdana, Geneva, sans-serif; line-height: 25px; color: #FFF; background-color: #06C; height: 27px; width: 87px; font-size: 12px; background-image: url(../images/bg_cs.png); background-repeat: no-repeat; background-position: -99px -381px; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; cursor: pointer; }
+.formtitle1 .formtitle1right { float: right; margin-right:6px; margin-top: 5px;}
+.closeButton {  background-image:url(../images/boxclose1.gif); width:27px;height:21px; }
+/*common CSS end*/
+
+
+/*imageupload CSS start*/
+.imageuploadbox { width: 500px; border: 1px solid #5CB5D2; margin-right: auto; margin-left: auto; position:relative; }
+.imageuploadbox .imageuploadtab li { line-height: 27px; font-weight: 700; text-align: center; float: left; height: 27px; background-color:#DCF0FC; border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; border-right-color: #5CB5D2; border-bottom-color: #5CB5D2; font-size:14px; }
+.imageuploadbox .imageuploadtab li a { display: block; height:27px; text-decoration:none; }
+.imageuploadbox .imageuploadtab .imageuploadcurrent { background-color: #FFF; border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; border-right-color: #5CB5D2; border-bottom-color: #FFF; color:#000; }
+.imageuploadbox .imageuploadtab .imageuploadcurrent a { color:#000; }
+.imageuploadbox .imageuploadtab .imageuploadclosebtn { width:27px; border-right-width: 0px; }
+.imageuploadbox .imageuploadformbox { }
+.imageuploadbox .imageuploadformbox .imageuploadform { margin: 10px 20px; }
+.imageuploadbox .imageuploadformbox .imageuploadform table td { padding: 4px 8px; }
+.imageuploadbox .imageuploadformbox .imageuploadform table tr th { font-size: 14px; vertical-align: top; width: 70px; line-height: 22px; padding-top:8px; }
+.imageuploadbox .imageuploadformbox .imageuploadformfile { height: 24px; width: 350px; line-height: 24px; }
+.imageuploadbox .imageuploadformbox .imageuploadforminput1 { height: 16px; width: 50px; padding-left:2px; }
+.imageuploadbox .imageuploadformbox .imageuploadformtextarea1 { font-family: Verdana, Geneva, sans-serif; font-size:12px; height: 50px; width: 280px; vertical-align: text-top; }
+.imageuploadbox .imageuploadformbox .imageuploadlist { padding: 5px; height: 240px; border-top-width: 1px; border-top-style: solid; border-top-color: #5CB5D2; overflow: scroll; }
+.imageuploadbox .imageuploadformbox .imageuploadlist2 { padding: 5px; height: 345px; border-top-width: 1px; border-top-style: solid; border-top-color: #5CB5D2; overflow: scroll; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadtable { width: 473px; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadtable tr th { background-color:#F0F0F0; padding:6px; font-weight:700; white-space:nowrap; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadtable tr td { padding:8px 6px; border-bottom-width: 1px; border-bottom-style:dashed; border-bottom-color: #C2C2C2; word-break:break-all; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadfail { color: #C00; white-space:nowrap; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploaddone { color: #666; white-space:nowrap; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadwait { color: #090; white-space:nowrap; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadprogress { width: 300px; float: left; margin-top: 12px; margin-left: 8px; margin-bottom: 10px; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadbtn { float: right; width: 160px; margin-top: 10px; }
+.imageuploadbox .imageuploadformbox .imageuploadbutton1 { font-family: Verdana, Geneva, sans-serif; line-height: 25px; color: #FFF; background-color: #F60; height: 25px; width: 95px; font-size: 12px; background-image: url(../images/imageupload_btns1.gif); background-repeat: no-repeat; background-position: left top; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; margin-right: 3px; margin-bottom: 8px; cursor: pointer; }
+.imageuploadbox .imageuploadformbox .imageuploadbutton2 { font-family: Verdana, Geneva, sans-serif; line-height: 25px; color: #FFF; background-color: #09F; height: 25px; width: 47px; font-size: 12px; background-image: url(../images/imageupload_btns1.gif); background-repeat: no-repeat; background-position: left -132px; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; margin-right: 3px; margin-bottom: 8px; cursor: pointer; }
+.imageuploadbox .imageuploadformbox .imageuploadbutton3 { font-family: Verdana, Geneva, sans-serif; line-height: 25px; color: #FFF; background-color: #09F; height: 25px; width: 95px; font-size: 12px; background-image: url(../images/imageupload_btns1.gif); background-repeat: no-repeat; background-position: left -67px; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; margin-right: 3px; margin-bottom: 8px; cursor: pointer; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadprogress .imageuploadprogressbarbg { float: left; height: 9px; width: 260px; margin-right: 6px; background-color: #CCC; background-image: url(../images/imageupload_bar1.gif); background-repeat: repeat-x; background-position: left top; font-size: 1px; line-height: 1px; margin-top: 2px; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadprogress .imageuploadprogressbar { float: left; height: 9px; width: 250px; margin-right: 6px; background-color: #CCC; background-image: url(../images/imageupload_bar1.gif); background-repeat: repeat-x; background-position: left -11px; font-size: 1px; line-height: 1px; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadprogress .imageuploadprogressoption { line-height: 20px; height: 20px; margin-top: 8px; clear:both; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadprogress .imageuploadprogressinfo { line-height: 16px; text-align: center; height: 16px; margin-bottom: 2px; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadprogress .imageuploadprogressvalue { float: right; width: 30px; font-weight: 700; text-align: right; }
+.imageuploadbox .imageuploadformbox .imageuploadact { background-color: #E8F6FE; border-top-width: 1px; border-top-style: solid; border-top-color: #5CB5D2; overflow: hidden; }
+.imageuploadbox .imageuploadformbox .imageuploadlist ul li .imageuploadlistimgborder .imageuploadlistimg { max-height: 90px; max-width: 120px; _height: 90px; _width: 120px; }
+.imageuploadbox .imageuploadformbox .imageuploadlist ul li p { line-height: 20px; height: 20px; width: 120px; overflow: hidden; margin-left: 10px; }
+.imageuploadbox .imageuploadformbox .imageuploadlist ul li p .imageuploaddone, .imageuploadbox .imageuploadformbox .imageuploadlist ul li p .imageuploadfail, .imageuploadbox .imageuploadformbox .imageuploadlist ul li p .imageuploadwait { margin-right: 15px; }
+.imageuploadbox .imageuploadformbox .imageuploadlist ul { margin-left:10px; overflow:hidden; width:463px; }
+.imageuploadbox .imageuploadformbox .imageuploadlist ul li { height: 148px; width: 140px; border: 1px solid #DDDDDD; float:left; margin:10px 12px 0 0; overflow: hidden; }
+.imageuploadbox .imageuploadformbox .imageuploadlist.imageuploadlist2 ul li .imageuploadlistimgborder { height: 90px; width: 120px; overflow: hidden; margin-top: 10px; margin-right: 10px; margin-left: 10px; text-align:center; margin-bottom: 5px; }
+.imageuploadbox .imageuploadformbox .imageuploadform table tr td .imageuploadforminput2 { line-height: 16px; height: 16px; padding-left: 2px; width: 120px; margin-right:15px; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadpages { line-height: 22px; margin: 10px; height: 22px; width: 400px; float: left; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadbtn2 { float: right; width: 57px; margin-top: 10px; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadtable tr td span { margin-left: 8px; color: #999; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadtable tr td span a { color: #FF6500; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadprogress .imageuploadprogressoption .imageuploadprogressaction { float: left; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadprogress .imageuploadprogressoption .imageuploadprogressfilter { float: right; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadtable tr td .imageuploadpreviewbox { position: relative; left: 0px; top: 0px; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadtable tr td .imageuploadpreviewbox .imageuploadpreview { position: absolute; background-image: url(../images/imageupload_pics.gif); background-repeat: no-repeat; background-position: 15px top; padding-top: 7px; display: none; left: 0px; top: 0px; }
+.imageuploadbox .imageuploadformbox .imageuploadlist .imageuploadtable tr td .imageuploadpreviewbox .imageuploadpreview .imageuploadpreviewimg { padding: 3px; border: 1px solid #999; background-color: #FFF; max-height: 90px; max-width: 120px; _height: 90px; _width: 120px; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadsuccessbox { width: 300px; float: left; margin-top: 12px; margin-left: 8px; margin-bottom: 10px; }
+.imageuploadbox .imageuploadformbox .imageuploadact .imageuploadsuccessbox .imageuploadsuccessinfo { line-height: 18px; background-image: url(../images/imageupload_pics.gif); background-repeat: no-repeat; background-position: 8px -196px; padding-left: 45px; }
+.imageuploadbox .imageuploadformbox .imageuploaddialogbox { position: absolute; z-index: 500; background-color: #FFF; left: 64px; top: 266px; padding: 12px; border: 1px solid #5CB5D2; display: none; }
+.imageuploadbox .imageuploadformbox .imageuploaddialogbox .imageuploaddialogclose { position: absolute; top: 0px; right: 0px; z-index: 550; _ right: -1px;
+}
+/*imageupload CSS end*/
+
+
+/*弹出表单公共 CSS start*/
+.msnlogo2 .longmarchlogo { background-color: #FFF; background-image: url(../images/LongMarchlogo.jpg); background-repeat: no-repeat; background-position: right center; position: absolute; font-size: 11px; line-height: 35px; font-weight: 700; color: #000; height: 35px; padding-right: 42px; font-family: Arial, Helvetica, sans-serif; top: 5px; right: 8px; }
+.tabbox1 { margin-top: 12px; }
+.tabbox1 .tabblue1 span { font-size: 12px; line-height: 24px; font-weight: 700; color: #FFF; background-color: #64B9D4; height: 24px; padding-right: 15px; padding-left: 15px; display:inline-block; min-width:50px; text-align:center; }
+.tabbox1 .tabgreen1 span { font-size: 12px; line-height: 24px; font-weight: 700; color: #FFF; background-color: #72A858; height: 24px; padding-right: 15px; padding-left: 15px; display:inline-block; min-width:50px; text-align:center; }
+.tabbox1 .tabbrown1 span { font-size: 12px; line-height: 24px; font-weight: 700; color: #FFF; background-color: #A89658; height: 24px; padding-right: 15px; padding-left: 15px; display:inline-block; min-width:50px; text-align:center; }
+.tabbox1 .editortool1 { line-height: 31px; background-color: #CCC; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -594px; height: 31px; border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: #64B9D4; border-right-color: #64B9D4; border-left-color: #64B9D4; clear: both; }
+.tabbox1 .editorbox1 { border: 1px solid #64B9D4; }
+.tabbox1 .editortool1 .toolbtn1 { background-color: #A6D0E7; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -654px; border: 1px solid #A6D0E7; color: #000; text-align: center; text-decoration: none; margin-top: 5px; margin-right: 5px; margin-left: 5px; padding-top: 2px; padding-right: 15px; padding-bottom: 2px; padding-left: 15px; }
+.tabbox1 strong { font-weight: 700; text-decoration: none; }
+.msnlogo2 { background-image: url(../images/logo.png); height: 32px; vertical-align: bottom; padding-left: 120px; padding-top:12px; background-repeat: no-repeat; background-position: 6px top; position: relative; border-bottom-color: #5CB5D2; border-bottom-width: 1px; border-bottom-style: solid; font-family: "微软雅黑", "黑体", "宋体"; font-size: 22px; color: #103190; z-index: 10; white-space: nowrap; }
+.formtopbtn1 { background-color: #EEE; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -713px; height: 43px; position: relative; }
+.formtopbtn1 .bigbtngroup { margin:6px 8px; }
+.sourcecode1 { height: 300px; width: 784px; margin: 8px; }
+.zoombtn1 { text-align: right; margin-top: 4px; margin-right: 10px; margin-bottom: 4px; margin-left: 10px; }
+.tabbox1 .brownborder1 { border-top-color: #A89658; border-right-color: #A89658; border-bottom-color: #A89658; border-left-color: #A89658; }
+.tabbox1 .greenborder1 { border-top-color: #72A858; border-right-color: #72A858; border-bottom-color: #72A858; border-left-color: #72A858; }
+.formbottom1 { background-color: #F4F4F4; height: 50px; margin-top: 10px; padding-top: 5px; position: relative; }
+.formtopbtn1 .normalbtn_l { position: absolute; left: 8px; top: 10px; font-size:14px; }
+.formbottom1 .normalbtn_l { position: absolute; left: 8px; top: 14px; font-size:14px; }
+.formbottom1 .normalbtn_c { position: absolute; left: 0px; top: 14px; font-size:14px; width:100%; text-align:center; }
+.formbottom1 .normalbtn_r { position: absolute; right: 8px; top: 14px; font-size:14px; }
+.normalbtn_l .orangebtn1 a:link, .normalbtn_l .orangebtn1 a:visited, .normalbtn_l .orangebtn1 a:hover, .normalbtn_l .orangebtn1 a:active { background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -795px; border: 1px solid #C95D00; }
+.errorinfo1 { line-height: 24px; color: #FFF; background-color: #C40101; height: 24px; padding-left: 8px; }
+/*弹出表单公共 CSS end*/
+
+
+
+.articlereleasebox1 { margin-top: 6px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; }
+.articlereleasebox1 .articlereleasetable1 { width:100%; }
+.articlereleasebox1 .articlereleasetable1 .articlereleasetable1td1 { border: 1px solid #5CB5D2; padding:15px; }
+.articlereleasebox1 .articlereleasetable1 .articlereleasetable1td2 { border: 1px solid #5CB5D2; width:420px; background-color:#E8F6FE; }
+.articlereleasetable1td1 table tr td { padding: 4px; }
+.articlereleasetable1 em { background-color: #CCC; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -330px; border: 1px solid #C8C8C8; cursor:pointer; text-align: center; white-space:nowrap; padding: 6px; vertical-align: middle; }
+.articlereleasetable1td2 .articlereleasesidebar1 { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #5CB5D2; padding: 12px; }
+.articlereleasetable1td2 .articlereleasesidebar1 .articlereleasesidebartable { width: 100%; }
+.articlereleasetable1td2 .articlereleasesidebar1 .articlereleasesidebartable td { padding: 4px; }
+.articlereleasetable1td2 .articlereleasesidebar1 .articlereleasesidebartable tr td .keyword1 { width: 100%; }
+.articlereleasetable1td2 .articlereleasesidebar1 .articlereleasesidebartable tr td .keyworddiv1 { padding:4px; border: 1px solid #C8C8C8; background-color:#FFF; line-height:18px; width:95% }
+.articlereleasetable1td2 .articlereleasesidebar1 .articlereleasesidebartable tr td .keyword1 td { padding:2px; }
+.articlereleasesidebartable tr td .relativearticle { background-color: #FFF; width: 272px; margin-top: 5px; margin-bottom: 5px; border: 1px solid #C8C8C8; margin-left: 66px; padding-top: 8px; padding-right: 5px; padding-bottom: 8px; padding-left: 5px; }
+.articlereleasetable1 .articlereleasetable1td1 .articlereleaseimagelist { width: 660px; border: 1px solid #C8C8C8; height:470px; overflow:auto; }
+.articlereleasebox1 .articlereleaseimagelist .imageuploadbtn .imageuploadbutton1 { font-family: Verdana, Geneva, sans-serif; line-height: 25px; color: #FFF; background-color: #F60; height: 25px; width: 95px; font-size: 12px; background-image: url(../images/imageupload_btns1.gif); background-repeat: no-repeat; background-position: left top; cursor: pointer; display: block; text-align: center; }
+.articlereleasebox1 .articlereleasetable1 .articlereleaseimagelist .imageuploadbtn { margin:10px 0 5px 15px; }
+.articlereleasebox1 .articlereleasetable1 .articlereleaseimagelist ul li { padding: 10px; border: 1px solid #E0E0E0; height: 180px; width: 180px; overflow: hidden; text-align:center; float:left; margin:5px 0 5px 8px; _margin:5px 4px; }
+.articlereleasebox1 .articlereleasetable1 .articlereleaseimagelist ul li .articlereleaselistimg { height: 135px; width: 180px; }
+.articlereleasebox1 .articlereleasetable1 .articlereleaseimagelist .clearfix li p { line-height: 22px; text-align: left; height: 22px; }
+.articlereleasebox1 .articlereleasetable1 .articlereleaseimagelist ul { zoom:1; margin-bottom: 10px; overflow:hidden; }
+.calendaricon { margin-left:-23px; cursor:pointer; vertical-align:middle; }
+.calendaricon2 { margin-left:-20px; cursor:pointer; vertical-align:middle; }
+.functionbar1 .bigbtngroupright { float: right; margin-right:0px; }
+.tabletitle1 { line-height: 26px; height: 26px; margin-left: 10px; }
+.font14 { font-size: 14px; }
+.tablebtngroup1 { }
+.tablebtngroup1 a { background-color: #CCC; background-image: url(../images/bg_cs.png); background-repeat: repeat-x; background-position: left -330px; border: 1px solid #C8C8C8; cursor:pointer; text-align: center; white-space:nowrap; padding: 4px 6px; vertical-align: middle; display:inline-block; }
+.normaltable .span1 { margin: 2px 5px; padding: 5px 8px; float:left; }
+.normaltable .span2 { border: solid 1px #bbb; margin: 2px 5px; padding: 5px 8px; float:left; }
+.normaltable .span3 { border: solid 1px #000; margin: 2px 5px; padding: 5px 8px; float:left; }
+.menudiv1 { border: 1px solid #BDD2EE; position: absolute; width: 70px; font-size: 14px; }
+.menudiv1 a { line-height: 26px; display: block; height: 26px; padding-left: 10px; background-color: #FFF; border: 1px solid #fff; cursor:pointer; }
+.menudiv1 .cur { line-height: 26px; display: block; height: 26px; padding-left: 10px; background-color: #CDEAF9; border: 1px solid #fff; }
+.title1 { font-size: 14px; font-weight: 700; line-height: 14px; color: #004499; margin-top: 15px; margin-right: 10px; margin-bottom: 5px; margin-left: 10px; clear: both; }
+.title2 { font-size: 14px; font-weight: 700; line-height: 14px; color: #004499; margin-top: 20px; margin-right: 10px; margin-bottom: 5px; margin-left: 10px; }
+.title1 .bigbtngroup { float:right; margin: 0px; }
+.taskbox1 { margin: 10px; }
+.taskbox1 .taskbtn1 { width: 105px; float: left; }
+.taskbox1 .taskbtn1 a { height: 25px; width: 94px; border: 1px solid #2C84E6; display: block; line-height: 25px; text-align: center; background-color: #2C84E6; margin-bottom: 10px; color: #FFF; }
+.taskbox1 .taskbtn1 .cur { background-color: #FFF; color: #000; }
+.taskbox1 .tasklist1 { line-height: 20px; background-color: #FFF; height: 150px; border: 1px solid #BFD3EF; float: none; width: auto; margin-left: 105px; padding: 5px; }
+.rsbtngroup1 { margin:10px; }
+.rsbtngroup1 .normalbtn_l { float:right; font-weight: 400; font-size: 12px; }
+.title1 .normalbtn_l { float:right; font-weight: 400; font-size: 12px;  margin-top:-10px; }
+.formdiv1 { padding-top: 5px; border-top-width: 1px; border-top-style: solid; border-top-color: #5CB5D2; }
+.newkeywords { margin-top: 10px; margin-right: 20px; margin-left: 20px; }
+.newkeywords .tabbox1 {  height:25px; float: left; margin:0px; }
+.newkeywords .tabbox1 li { line-height: 25px; background-color: #D2D2D2; float: left; height: 25px; width: 90px; margin-right: 2px; text-align: center; display: block; }
+.newkeywords .tabbox1 li a { line-height: 25px; height: 25px; width: 90px; text-align: center; display: block; text-decoration:none; color:#000; }
+.newkeywords .tabbox1 .cur { background-color: #1F7FBC; }
+.newkeywords .tabbox1 .cur a { color:#fff;}.newkeywords .keylistbox1 { background-color: #EBF3FF; border-top-width: 3px; border-top-style: solid; border-top-color: #1F7FBC; }
+.newkeywords .keylistbox1 {margin-bottom:30px;}
+.newkeywords .keylistbox1 .title1 { font-size: 12px; font-weight: 400; color:#000; }
+.newkeywords .keylistbox1 ul {overflow:hidden; clear:both; width:720px; padding-bottom:10px;}
+.newkeywords .keylistbox1 ul li { font-size: 14px; line-height: 28px; float: left; margin-left:10px; margin-right: 20px;}
+.newkeywords .keylistbox1 ul li a { white-space:nowrap; text-decoration:underline; }
+.newkeywords .tabandsearch { clear: both; height:25px; }
+.newkeywords .tabandsearch .addkeywords1 { float: right; position: relative; }
+.newkeywords .inputclass4 { padding-top:5px; padding-bottom:3px;width:120px; height:15px; }
+.newkeywords .tabandsearch .addkeywords1 ol {position: absolute; left: 270px; top: 0px; width: 190px; background-color: #FFF; border: 1px solid #C8C8C8; z-index:500 }
+.newkeywords .tabandsearch .addkeywords1 ol li { margin:4px 8px; font-size:14px; }
+.updater { position:absolute; border:1px solid #000000; font-weight:bold; padding:5px!important; vertical-align:middle; line-height:20px;}
+.updateind { background: transparent url(../images/indicator.gif) no-repeat top left; width:18px; height:18px; display:inline-block;  *display: inline; }
+.m10{margin-bottom:10px}
+.main-content{
+	float: right;
+	width: 517px;
+	border: 2px solid #d3dfe8;
+}
+.main-content .hd{
+	padding: 10px;
+	border-bottom: 1px solid #d3dfe8;
+}
+.main-content .hd h2{
+	font-size: 24px;
+	color: #025c9c;
+}
+.main-content .bd{
+	padding: 0 1px;
+}
+.status-bar{
+	height: 27px;
+	line-height: 27px;
+	font-size: 14px;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+.status-bar span{
+	height: 15px;
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 370px;
+	margin: 5px 8px 0 0;
+	border: 1px solid #aaa;
+	background: url(../images/status_progress.png) repeat-x 0 0;
+}
+.status-bar span em{
+	display: block;
+	height: 15px;
+	background: url(../images/status_progress.png) repeat-x 0 -15px;
+}
+.document-mod{
+	background: #f1f7f7;
+	margin-bottom: 2px;
+	padding: 10px;
+}
+.document-mod h3{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.document-mod table{
+	width: 100%;
+}
+.document-mod th,
+.document-mod td{
+	padding: 5px 0;
+	font-size: 12px;
+	vertical-align: top;
+}
+.document-mod th{
+	width: 96px;
+	text-align: right;
+	color: #666;
+}
+.document-mod td{
+	padding-left: 5px;
+}
+.document-mod td li{
+	padding: 5px 0;
+}
+.document-mod td .inp{
+	padding: 5px;
+	font-size: 12px;
+	border: 1px solid #d0d0d0;
+}
+.document-mod td .inp1{
+	width: 270px;
+}
+.document-mod td .inp2{
+	width: 156px;
+}
+.document-mod td .inp3{
+	width: 310px;
+}
+.document-mod td li .addr-radio{
+	margin-right: 6px;
+}
+
+/*add by ljq*/
+.table_choice { margin:0px 0px 0 0px; min-width:100%; }
+.table_choice table {border-collapse: collapse;}
+.table_choice td { border: 0px solid #BDD2EE; line-height: 18px; height: 18px; padding: 1px;}
+.table_choice table .trhead { font-weight: 400; color: #000; background-color: #D6E8FF; }
+.table_choice table .tdhead { font-weight: 700; color: #000; background-color: #D6E8FF; }
+.table_choice table tr .tdhead em { margin-right: 12px; }
