@@ -219,28 +219,37 @@
                 <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_publish")){?>
                 <li index="<?=$operateid++?>"><a href="/user" target="win">成员用户</a></li>
                 <?}?>
+                  <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_publish")){?>
+                <li index="<?=$operateid++?>"><a href="/lesson" target="win">学员课时</a></li>
+                <?}?>
                 <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_publish")){?>
-                <li index="<?=$operateid++?>"><a href="/publish" target="win">出版社管理</a></li>
+                <li index="<?=$operateid++?>"><a href="/user" target="win">学员缴费</a></li>
+                <?}?>
+                <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_publish")){?>
+                <li index="<?=$operateid++?>"><a href="/user" target="win">双11活动</a></li>
+                <?}?>
+<!--                <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_publish")){?>
+                <li index="<?//=$operateid++?>"><a href="/publish" target="win">出版社管理</a></li>
                 <?}?>
                 <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_teacher")){?>
-                <li index="<?=$operateid++?>"><a href="/teacher" target="win">老师认证管理</a></li>
+                <li index="<?//=$operateid++?>"><a href="/teacher" target="win">老师认证管理</a></li>
                 <?}?>
                  <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_teacher")){?>
-                <li index="<?=$operateid++?>"><a href="/teacher/redindex" target="win">红笔老师管理</a></li>
+                <li index="<?//=$operateid++?>"><a href="/teacher/redindex" target="win">红笔老师管理</a></li>
                 <?}?>
 
                 <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_teacher")){?>
-                <li index="<?=$operateid++?>"><a href="/teacher/pay_teacher_arrange" target="win">付费批改老师管理</a></li>
+                <li index="<?//=$operateid++?>"><a href="/teacher/pay_teacher_arrange" target="win">付费批改老师管理</a></li>
                 <?}?>
                   <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_blacklist")){?>
-                <li index="<?=$operateid++?>"><a href="/blacklist" target="win">黑名单管理</a></li>
+                <li index="<?//=$operateid++?>"><a href="/blacklist" target="win">黑名单管理</a></li>
                 <?}?>
                 <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_push")){?>
-                <li index="<?=$operateid++?>"><a href="/push" target="win">消息推送</a></li>
+                <li index="<?//=$operateid++?>"><a href="/push" target="win">消息推送</a></li>
                 <?}?>
                 <? if(MisRoleResourceService::showLeftMenu($model["mis_userid"],"operation_msg")){?>
-                <li index="<?=$operateid++?>"><a href="/msg" target="win">群发私信</a></li>
-                <?}?>              
+                <li index="<?//=$operateid++?>"><a href="/msg" target="win">群发私信</a></li>
+                <?}?> -->
                 </div>
                 <!--统计功能-->
                 <li index="<?=$operateid++?>" ><a style="text-indent:0px;" href="/operate/default" target="win" id="liid7">统计功能</a></li>

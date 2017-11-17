@@ -4,12 +4,12 @@ namespace mis\service;
 
 use Yii;
 use yii\data\Pagination;
-use common\models\yj\YjUser;
+use common\models\yj\User;
 
 /**
  * 用户
  */
-class YjUserService extends YjUser {
+class YjUserService extends User {
     
     const PAGESIZE = 50;
 

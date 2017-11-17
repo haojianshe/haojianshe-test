@@ -6,7 +6,7 @@ use Yii;
 use mis\components\MBaseAction;
 use mis\service\LessonService;
 use common\service\DictdataService;
-
+use common\service\yj\DictDataService as dataservice;
 /**
  * 跟着画列表页
  */
@@ -35,7 +35,7 @@ class IndexAction extends MBaseAction {
             }
             $moedls[$k] = $v;
         }
-        
+
         $data['title'] = $title;
         $data['f_catalog_id'] = $f_catalog_id;
         $data['s_catalog_id'] = $s_catalog_id;

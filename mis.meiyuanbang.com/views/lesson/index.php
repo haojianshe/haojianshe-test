@@ -1,7 +1,7 @@
   <?php
 use common\widgets\MyLinkPager;
   use common\service\dict\BookDictDataService;
-  use common\service\DictdataService;
+  use common\service\yj\DictDataService;
   ?>
   <link rel="stylesheet" type="text/css" href='/static/css/pager.css'>
   <table cellspacing="0" cellpadding="0" class="content_list">
@@ -17,29 +17,41 @@ use common\widgets\MyLinkPager;
                       <td>
                           <div style="float:left;" class="explain-col"> 
                            &nbsp;
-                          主分类：
-                         <?php
-                         $array = [];
-                         foreach(DictdataService::getLessonMainType() as $key=>$val){
-                             $array[$val['maintypeid']] = $val['maintypename'];
-                         }
-                          echo BookDictDataService::createMenuList('f_catalog_id',$array , $f_catalog_id, 'f_catalog_id','','','','','<option value="0" >请选择</option>');
-                         ?>
-                          &nbsp;
-                          子分类：
-                    <?php
-                    if(empty($s_catalog_id || $f_catalog_id)){
-                         echo '<select name="s_catalog_id" id="s_catalog_id">
-                         <option value="" >请选择</option>
-                          </select>';    
-                         }else{
-                             $newArray = DictdataService::getLessonSubType($f_catalog_id);
-                              foreach($newArray as $key=>$val){
-                               $arrays[$val['subtypeid']] = $val['subtypename'];
+                          课程类型：
+                          <select name="course_type" id="course_type">
+                              <option value="0">请选择</option>
+                              <?php 
+                              foreach(DictDataService::getCoursePriceList() as $k=>$v){
+                              ?>
+                              <option value="<?php echo $k ?>" >
+                                  <?php 
+                              if($k==45){
+                                  echo $k.'辅助课';
+                              }else{
+                                  echo $k.'分钟课';
                               }
-                             echo BookDictDataService::createMenuList('s_catalog_id',$arrays , $s_catalog_id, 's_catalog_id','','','','','<option value="0" >请选择</option>');
-                         }
-                         ?> 
+                              ?></option>
+                              <?php 
+                              } 
+                              ?>
+                          </select>
+                          &nbsp;
+                          所属卡级别：
+                          <select name="courseid" id="courseid">
+                              <option value="0">请选择</option>
+                              <?php 
+                              foreach(DictDataService::getCoursePriceList() as $k=>$v){
+                                  foreach($v as $kk=>$vv){
+                                      if($courseid==$vv['courseid']){
+                                          $where = 'selected=selectd';
+                                      }
+                              ?>
+                              <option value="<?php echo $k ?>" <?php echo $where;?>><?php echo $vv['courseName']?></option>
+                              <?php 
+                              } 
+                              } 
+                              ?>
+                          </select>
                           &nbsp;
                           标题:
                          <input name="title" type="text" value="<?php echo @$title?>"   size="15px"  class="input-text">
@@ -58,8 +70,6 @@ use common\widgets\MyLinkPager;
               </form>
             </div>
         </th>
-      
-        
         <tr class="operate" >
           <th >  共有<?= '<strong>'.$pages->totalCount.'</strong>' ?>条记录&nbsp;&nbsp;浏览数<?php echo '<strong>'.$counts.'</strong>'?></th>
        </tr>
@@ -221,23 +231,23 @@ function addedit(lessonid){
 
 
       var index = parent.layer.getFrameIndex(window.name);
-      $("#f_catalog_id").change(function () {
-        var f_catalog_id = $(this).val();
-        if(f_catalog_id==0){
-             $("#s_catalog_id option").remove();
-              $("#s_catalog_id").append('<option value=0>请选择</option>');
+      $("#course_type").change(function () {
+        var course_type = $(this).val();
+        if(course_type==0){
+             $("#courseid option").remove();
+              $("#courseid").append('<option value=0>请选择</option>');
              return;
         } 
         $("#dividid tr").remove();
         var url = '/lesson/select_menu';
         var data = {
-            f_catalog_id: f_catalog_id,
+            course_type: course_type,
             type:2
         }
         $.post(url, data, function (m) {
-            $("#s_catalog_id option").remove();
-            $("#s_catalog_id").append('<option value=0>请选择</option>');
-            $("#s_catalog_id").append(m);
+            $("#courseid option").remove();
+            $("#courseid").append('<option value=0>请选择</option>');
+            $("#courseid").append(m);
         }, 'json');
     });
 </script>

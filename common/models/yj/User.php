@@ -21,7 +21,7 @@ use Yii;
  * @property integer $status
  * @property string $mark
  */
-class YjUser extends \yii\db\ActiveRecord
+class User extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

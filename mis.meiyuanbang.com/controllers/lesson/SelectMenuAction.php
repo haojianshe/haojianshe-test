@@ -4,7 +4,8 @@ namespace mis\controllers\lesson;
 
 use Yii;
 use mis\components\MBaseAction;
-use common\service\DictdataService;
+use common\service\yj\DictDataService;
+
 /**
  * 获取二级分类
  */
@@ -15,13 +16,16 @@ class SelectMenuAction extends MBaseAction {
 
     public function run() {
         $request = Yii::$app->request;
-        $f_catalog_id = $request->post('f_catalog_id');
-
-        $data = DictdataService::getLessonSubType($f_catalog_id);
+        $course_type = $request->post('course_type');
+        $data = DictDataService::getCoursePriceList();
         $array = [];
         $str = '';
         foreach ($data as $key => $val) {
-            $str .= "<option value=" . $val['subtypeid'] . ">" . $val['subtypename'] . "</option>";
+            if ($course_type == $key) {
+                foreach ($val as $k => $v) {
+                    $str .= "<option value=" . $v['courseid'] . ">" .$v['courseName'].';'.$key."分钟".'、单节:'.$v['coursePrice']. "元</option>";
+                }
+            }
         }
         echo json_encode($str);
         exit;
