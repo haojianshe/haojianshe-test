@@ -34,7 +34,7 @@
     <tr>
     	<td>年龄<span class='need'>*</span></td>
         <td>
-	<input class="inputclass1" name="user_age" style="width:130px" type="text" value="<?= $UserModel->user_age ?>"   datatype="/^-?[1-9]\d*$/" nullmsg="不能为空"  errormsg="必须为数字" maxlength="3" sucmsg="&nbsp;" />
+	<input class="inputclass1" name="user_age" style="width:130px" type="text" value="<?= $UserModel->user_age ?>"   sucmsg="&nbsp;" />
         </td>
     </tr>
      <tr>
@@ -44,8 +44,6 @@
                        datatype="/^-?[1-9]\d*$/" nullmsg="不能为空"  errormsg="必须为数字" maxlength="11"  sucmsg="&nbsp;" sucmsg="&nbsp;"/>
         </td>
     </tr>
-    
-    
      <tr>
     	<td>是否上体验课</td>
         <td>   

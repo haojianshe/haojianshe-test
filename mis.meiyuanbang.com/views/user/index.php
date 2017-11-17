@@ -113,7 +113,6 @@
             echo '<span style=color:green>正常</span>&nbsp;';
         } ?>
       	<a name='aedit' uid='<?= $model['uid'] ?>' >编辑</a>&nbsp;
-      	<a name='course' uid='<?= $model['uid'] ?>' >课时</a>&nbsp;
          <?php if($model['status']==1) { ?>
       			<a name='adel' uid='<?= $model['uid'] ?>' >注销</a>&nbsp;
       	<?php } ?>
@@ -133,6 +132,7 @@
   </table>
 <div id="_tips"></div>
 <script>
+
 //新建按钮绑定事件
 $('#btnnew').on('click', function(){
 	addedit(0);
@@ -191,7 +191,7 @@ $("a[name=a_audit]").click(function () {
     return false;
 });
 
-//删除按钮绑定事件
+//注销按钮绑定事件
 $("a[name=adel]").click(function () {
 	var uid = $(this).attr("uid");
         var type = 2;
